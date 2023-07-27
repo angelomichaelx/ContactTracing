@@ -152,5 +152,11 @@ class add_data(tk.Frame):
         exposurestatus = self.exposurechoice.get()
         teststatus = self.testchoice.get()
          
+        # Save the information gathered into excel file using csv
+        with open("information.csv", "a", newline = "") as file:
+            store = csv.writer(file)
+            store.writerow([name, gender, birthdate, age, email, city, vaccinationstatus, symptomstatus, exposurestatus, teststatus])
 
-
+        # Create a messagebox that will let the user know that their data has ben submitted
+        messagebox.showinfo("Admin", "Thank you for your time. STOP THE SPREAD, WASH YOUR HANDS.")
+        self.clear_entry()
