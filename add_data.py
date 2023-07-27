@@ -139,3 +139,18 @@ class add_data(tk.Frame):
 
     def close(self):
         self.master.destroy()
+        # Get the information gathered from user
+    def get_data(self):
+        name = self.name_entry.get()
+        gender = self.gender_entry.get()
+        birthdate = self.birthdate_entry.get()
+        age = self.age_entry.get()
+        email = self.email_entry.get()
+        city = self.city_entry.get()
+        vaccinationstatus = self.choice.get()
+        symptomstatus = self.symptomchoice.get()
+        exposurestatus = self.exposurechoice.get()
+        teststatus = self.testchoice.get()
+         
+
+
