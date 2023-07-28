@@ -51,3 +51,8 @@ class search_area(tk.Frame):
 
                 result = tk.Label(text = result, font = ("Arial", 20) , justify=("left"), bg = "light blue")
                 result.place(x = 180, y = 200)
+                
+        #if the user are not registered
+        else:
+            noresult = tk.Label(text="ERROR!PERSON IS NOT REGISTERED.")
+            noresult.place(x = 25, y = 100)
